@@ -1,0 +1,38 @@
+{
+    "professionals":[
+        {
+            "name": "Camila Drago",
+            "specialization":"Reumatología",
+            "path_img": "../img/doctor1x300.jpg",
+            "description": "Voluptatibus facere iure eaque iste, excepturi, consectetur dolor beatae! Et consequuntur, quisquam accusamus sed sequi recusandae soluta.",
+            "monday":[],
+            "tuesday":[],
+            "wednesday":[],
+            "thursday":[],
+            "friday":[]
+        },
+        {
+            "name": "Damián Soria",
+            "specialization":"Dermatología",
+            "path_img": "../img/doctor2x300.jpg",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem asperiores tempore fugiat ex ipsa at nisi earum, aspernatur obcaecati harum voluptatibus facere iure eaque iste, excepturi, consectetur dolor soluta ipsa corrupti odio architecto repellendus. Vel alias possimus.",
+            "monday":[],
+            "tuesday":[],
+            "wednesday":[],
+            "thursday":[],
+            "friday":[]
+        },
+        {
+            "name": "Natalí Martínez",
+            "specialization":"Traumatología",
+            "path_img": "../img/doctor3x300.jpg",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem asperiores tempore fugiat ex ipsa at nisi earum, aspernatur obcaecati harum voluptatibus facere iure eaque iste, excepturi, consectetur dolor beatae! Et consequuntur, quisquam accusamus sed sequi recusandae soluta ipsa corrupti odio architecto repellendus. Vel alias possimus.",
+            "monday":[],
+            "tuesday":[],
+            "wednesday":[],
+            "thursday":[],
+            "friday":[]
+        }
+    ],
+    "horarios":[]
+}

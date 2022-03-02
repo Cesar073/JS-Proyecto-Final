@@ -1,0 +1,366 @@
+/* ############################# GENERALES ############################ */
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+/* ############################### BODY ############################### */
+body {
+    width: 80%;
+    margin: auto;
+}
+
+/* ################################ NAV ############################### */
+nav {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+    font-style: italic;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo__div {
+    width: 25%;
+}
+
+.logo__div img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.nav__list {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    /* background-color: green; */
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: None;
+    color: #141480;
+}
+
+li {
+    display: block;
+}
+
+/* ############################ MODAL LOGIN ########################### */
+.modal_login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal_container{
+    width: 300px;
+    height: 350px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: all 500ms ease;
+    position: relative;
+    transform: translateY(-30%);
+}
+
+.modal_header{
+    padding: 0px 10px;
+    height: 30px;
+    width: 100%;
+    background: #141480;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+#btn_modal_X {
+    height: 30px;
+    width: 30px;
+    background: #141480;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal_contents {
+    margin-top: 25px;
+    padding: 30px;
+    text-align: center;
+}
+
+#input_user {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#input_pass {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#btn_access {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    background: #141480;
+    border: none;
+    cursor: pointer;
+}
+
+#btn_create_user {
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: none;
+    color:#141480;
+    cursor: pointer;
+}
+
+#modal_warning {
+    background: hsl(187, 52%, 46%);
+}
+
+#login_msj_error {
+    /* height: 60px; */
+    /* padding: 5px; */
+    width: 100%;
+    /* background: hsl(187, 52%, 46%); */
+    font-weight: 600;
+    font-size: 19px;
+}
+
+/* ############################ MAIN INDEX ########################### */
+
+#banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.banner {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #d47324;
+}
+
+.banner_text, h2{
+    padding: 15px;
+    font-size: 3rem;
+}
+
+#nav_left, #nav_right {
+    width: 60px;
+    align-self: center;
+    
+    border-radius: 45%;
+}
+#nav_left > p, #nav_right > p {
+    font-size: 3rem;
+}#nav_left:hover, #nav_right:hover {
+    background-color:hsl(189, 88%, 62%);
+    color: white;
+}
+
+#banner2 {
+    display: none;
+    visibility: hidden;
+}
+#banner3 {
+    display: none;
+    visibility: hidden;
+}
+
+
+/* ############################ MAIN TURNOS ########################### */
+.container_prof {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: 2px solid rgb(118, 118, 146);
+    padding: 15px;
+    align-items: center;
+}
+
+.row__dias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    /* background-color: #aeb0c7; */
+}
+.p__dias {
+    grid-column: 1 / 6;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 600;
+    /* background-color: green; */
+}
+
+.p__dia_true {
+    background-color: hsl(231, 4%, 69%);
+    font-weight: 600;
+    height: 50px;
+    border-left: 1px solid white;
+}
+
+.p__dia_false {
+    background-color: hsl(231, 4%, 69%);
+    color: white;
+    border-left: 1px solid white;
+    height: 50px;
+}
+
+.row__hor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.schedule_available {
+    background-color: lightgreen;
+    font-weight: 600;
+    border: 1px solid white;
+}
+.schedule_not_available {
+    background-color: #d47324;
+    border: 1px solid white;
+}
+.no_work {
+    background-color: gray;
+    border: 1px solid white;
+}
+.schedule_available:hover {
+    border: 1px solid blue;
+}
+
+.references {
+    border: 2px solid gray;
+    border-bottom: 0px;
+    padding: 3px;
+    margin-top: 20px;
+}
+
+.reference {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.graphic_refernce_1 {
+    background-color: lightgreen;
+    height: 20px;
+    width: 150px;
+}
+.graphic_refernce_2 {
+    background-color: red;
+    height: 20px;
+    width: 150px;
+}
+.graphic_refernce_3 {
+    background-color: gray;
+    height: 20px;
+    width: 150px;
+}
+
+/* .p__monday{
+    grid-column:1/2;
+}
+.p__tuesday{
+    grid-column:2/3;
+}
+.p__wednesday{
+    grid-column:3/4;
+    background-color: green;
+}
+.p__thursday{
+    grid-column:4/5;
+}
+.p__friday{
+    grid-column:5/6;
+} */
+
+.search_container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    background-color:#ebe9e9;
+}
+
+.search_container label {
+    grid-column: 1 / 4;
+    padding-bottom: 15px;
+    color:#0914b1;
+    font-weight: 600;
+}
+
+#input_professional, #input_day, #input_specialization {
+    height: 40px;
+    font-size: 1.3rem;
+}
+
+.search_container img{
+    width: 50%;
+}
+
+.div_input_btn {
+    display: flex;
+    align-items: center;
+}
+
+/* ############################ MAIN TURNOS ########################### */
+
+.prof {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+.prof_text {
+    height: 300px;
+    display: grid;
+    margin-bottom: 50px;
+    padding: 15px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /* border: 2px solid black; */
+}
+.div_btn_turn {
+    display: grid;
+    grid-column-end:auto;
+}
+.btn_turn {
+    height: 50px;
+    width: 120px;
+    background-color: darkseagreen;
+}

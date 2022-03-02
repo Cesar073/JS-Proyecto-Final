@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&family=Raleway:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo__div">
+          <img src="../img/logo.png" alt="" />
+        </div>
+        <h1>Sanatorio<br />Santa Fe</h1>
+      </div>
+      <ul class="nav__list">
+        <li><a class="nav-link" href="../index.html">Inicio</a></li>
+        <li><a class="nav-link" href="./turnos.html">Turnos</a></li>
+        <li>
+          <a class="nav-link" href="./profesionales.html">Profesionales</a>
+        </li>
+        <li><a class="nav-link" href="" id="btn_login">Login</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="modal_login">
+        <div class="modal_container">
+          <div class="modal_header">
+            <label for="">Login</label>
+            <button id="btn_modal_X">X</button>
+          </div>
+          <div class="modal_contents">
+            <input id="input_user" type="text" placeholder="Usuario" />
+            <input id="input_pass" type="password" placeholder="Contraseña" />
+            <button id="btn_access">Ingresar</button>
+            <button id="btn_create_user">Crear cuenta</button>
+            <!-- Acá insertamos el mensaje cuando ocurren errores de login -->
+            <div id="modal_warning"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="prof_list">
+        <!-- <article class="prof">
+          <div class="prof_img">
+            <img src="../img/doctor1x300.jpg" alt="" />
+          </div>
+          <div class="prof_text">
+            <h2>Camila Drago</h2>
+            <h3>Traumatología</h3>
+            <p>
+              Voluptatibus facere iure eaque iste,
+              excepturi, consectetur dolor beatae! Et consequuntur, quisquam
+              accusamus sed sequi recusandae soluta.
+            </p>
+            <div class="div_btn_turn">
+              <button class="btn_turn">Pedir turno</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prof">
+          <div class="prof_img">
+            <img src="../img/doctor2x300.jpg" alt="" />
+          </div>
+          <div class="prof_text">
+            <h2>Damián Soria</h2>
+            <h3>Dermatología</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga
+              exercitationem asperiores tempore fugiat ex ipsa at nisi earum,
+              aspernatur obcaecati harum voluptatibus facere iure eaque iste,
+              excepturi, consectetur dolor soluta ipsa corrupti odio
+              architecto repellendus. Vel alias possimus.
+            </p>
+            <div class="div_btn_turn">
+              <button class="btn_turn">Pedir turno</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prof">
+          <div class="prof_img">
+            <img src="../img/doctor3x300.jpg" alt="" />
+          </div>
+          <div class="prof_text">
+            <h2>Natalí Martínez</h2>
+            <h3>Dermatología</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga
+              exercitationem asperiores tempore fugiat ex ipsa at nisi earum,
+              aspernatur obcaecati harum voluptatibus facere iure eaque iste,
+              excepturi, consectetur dolor beatae! Et consequuntur, quisquam
+              accusamus sed sequi recusandae soluta ipsa corrupti odio
+              architecto repellendus. Vel alias possimus.
+            </p>
+            <div class="div_btn_turn">
+              <button class="btn_turn">Pedir turno</button>
+            </div>
+          </div>
+        
+        </article> -->
+      </section>
+    </main>
+
+    <script src="../scripts/script_db.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../scripts/script_prof.js"></script>
+    <script src="../scripts/script_login.js"></script>
+    <script src="../scripts/scripts.js"></script>
+  </body>
+</html>
