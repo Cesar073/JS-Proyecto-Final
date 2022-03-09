@@ -1,4 +1,4 @@
-// Nuestro Json, representará lo que tendríamos en una base de datos.
+// Nuestro Json representará lo que tendríamos en una base de datos.
 // Así mismo, los datos nuevos que puedan generarse como reservar un turno o crear una cuenta nueva
   // se cargarán en el localStorage. Entre ambos representarían una base de datos de backend.
 
@@ -53,6 +53,7 @@ class professional {
     }
 
 if (localStorage.length == 0){
+    // Creo un array vacío para los Users y dejo el Login para indicar que no hay sesión activa.
     localStorage.setItem("arrayUserStorage",JSON.stringify(arrayUsersOfStorage));
     localStorage.setItem("session", JSON.stringify("Login"));
 }else{
