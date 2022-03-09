@@ -152,10 +152,7 @@ li {
 }
 
 #login_msj_error {
-    /* height: 60px; */
-    /* padding: 5px; */
     width: 100%;
-    /* background: hsl(187, 52%, 46%); */
     font-weight: 600;
     font-size: 19px;
 }
@@ -172,7 +169,6 @@ li {
     width: 1200px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    background-color: #d47324;
 }
 
 .banner_text, h2{
@@ -219,14 +215,12 @@ li {
     font-size: 1.2rem;
     text-align: center;
     align-items: center;
-    /* background-color: #aeb0c7; */
 }
 .p__dias {
     grid-column: 1 / 6;
     font-size: 1.3rem;
     font-style: italic;
     font-weight: 600;
-    /* background-color: green; */
 }
 
 .p__dia_true {
@@ -294,23 +288,6 @@ li {
     height: 20px;
     width: 150px;
 }
-
-/* .p__monday{
-    grid-column:1/2;
-}
-.p__tuesday{
-    grid-column:2/3;
-}
-.p__wednesday{
-    grid-column:3/4;
-    background-color: green;
-}
-.p__thursday{
-    grid-column:4/5;
-}
-.p__friday{
-    grid-column:5/6;
-} */
 
 .search_container {
     display: grid;

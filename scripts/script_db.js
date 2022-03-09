@@ -1,75 +1,83 @@
-// Este script va a representar lo que me gustaría que haya en una base de datos. Básicamente cargo todo en el localStorage
-// cada vez que se inicia la página, por ende coloco el script en el inicio del archivo HTML, pero habría que tener en cuenta
-// que en un proyecto completo dichas líneas de código no existirían porque estaría esta info en una db.
-// Por otro lado, hago una comprobación de la existencia de los datos para que sólo se creen la primera vez y no me
-// sobrescriba los datos cargados con anterioridad, para que se mantengan las modificaciones que realice el usuario.
+// Nuestro Json, representará lo que tendríamos en una base de datos.
+// Así mismo, los datos nuevos que puedan generarse como reservar un turno o crear una cuenta nueva
+  // se cargarán en el localStorage. Entre ambos representarían una base de datos de backend.
 
-// NOTA: para facilitar el control resumo el dato de los horarios de los profesionales:
-// prof0 = Agustín Pérez => [lun a mie = mañana] [jue y vie = tarde]
-// prof1 = Linus Torvalds => [sólo tarde]
-// prof2 = Bill Gates => [todos los horarios]
+const URLJSON = "../db/data_base.json";
+let arrayUsers = [];
+let arrayUsersOfStorage = [];
+const arrayProf = [];
 
-const prof0 = {
-    name: "Agustín Pérez",
-    specialty: "Traumatología",
-    mon_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs"],
-    tue_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs"],
-    wed_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs"],
-    thu_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    fri_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-}
-
-const prof1 = {
-    name: "Linus Torvalds",
-    specialty: "Traumatología",
-    mon_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    tue_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    wed_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    thu_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    fri_work_shedule: ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-}
-
-const prof2 = {
-    name: "Bill Gates",
-    specialty: "Traumatología",
-    mon_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    tue_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    wed_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    thu_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-    fri_work_shedule: ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
-}
-
-let arrayDays = ["Lunes","Martes","Miércoles","Jueves","Viernes"];
-let arrayHours = ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"];
-let arrayPatients = ["Gisel Aguiar", "Andres López","Matías Martos","Liliana Fonseca","Jorge Rivas","Marcos Leones", "Alicia Ferrero"];
-class Users{
-    constructor(user, password){
-        this.user = user;
-        this.password = password;
+class professional {
+    constructor(professional, specialization) {
+        this.professional = professional;
+        this.specialization = specialization;
+        this.monday = [];
+        this.tuesday = [];
+        this.wednesday = [];
+        this.thursday = [];
+        this.friday = [];
     }
-}
-let user = {name: "admin",
-            pass: "123456",
+    set_turns(day, hour, patient) {
+        switch (day) {
+            case 0:
+                this.monday.push(`${hour} - ${patient}`);
+                break;
+            case 1:
+                this.tuesday.push(`${hour} - ${patient}`);
+                break;
+            case 2:
+                this.wednesday.push(`${hour} - ${patient}`);
+                break;
+            case 3:
+                this.thursday.push(`${hour} - ${patient}`);
+                break;
+            case 4:
+                this.friday.push(`${hour} - ${patient}`);
+                break;
+        };
+    }
+    get_hours(day) {
+        switch (day) {
+            case 0:
+                return this.monday;
+            case 1:
+                return this.tuesday;
+            case 2:
+                return this.wednesday;
+            case 3:
+                return this.thursday;
+            case 4:
+                return this.friday;
+            }
         }
-let arrayUser = [];
-arrayUser.push(new user(user));
+    }
 
-
-// Subimos al localStorage el JSON con los datos
 if (localStorage.length == 0){
-    const _prof0 = JSON.stringify(prof0);
-    const _prof1 = JSON.stringify(prof1);
-    const _prof2 = JSON.stringify(prof2);
-    const _arrayDays = JSON.stringify(arrayDays);
-    const _arrayHours = JSON.stringify(arrayHours);
-    const _arrayPatients = JSON.stringify(arrayPatients);
-    const _user = JSON.stringify(arrayUser);
-
-    localStorage.setItem("prof0", _prof0);
-    localStorage.setItem("prof1", _prof1);
-    localStorage.setItem("prof2", _prof2);
-    localStorage.setItem("arrayDays", _arrayDays);
-    localStorage.setItem("arrayHours", _arrayHours);
-    localStorage.setItem("arrayPatients", _arrayPatients);
-    localStorage.setItem("user",_user);
+    localStorage.setItem("arrayUserStorage",JSON.stringify(arrayUsersOfStorage));
+    localStorage.setItem("session", JSON.stringify("Login"));
+}else{
+    arrayUsersOfStorage = JSON.parse(localStorage.getItem("arrayUserStorage"));
 }
+
+// Obtenemos los datos del JSON y localStorage
+$.getJSON(URLJSON, function (response, status) {
+    if (status === "success") {
+
+        // arrayUsers JSON
+        let _users = response.users;
+        for (const data of _users) {
+            arrayUsers.push(new Users(data.name, data.pass));
+        };
+
+        // arrayProf JSON
+        let _prof = response.professionals;
+        for (const data of _prof){
+            arrayProf.push (new professional(data.name.toUpperCase(), data.specialization));
+        }
+    }else{
+        console.log("Error al abrir json");
+    }
+    for (pos in arrayUsersOfStorage){
+        arrayUsers.push(new Users(arrayUsersOfStorage[pos].user, arrayUsersOfStorage[pos].password));
+    }
+});

@@ -5,34 +5,92 @@
             "specialization":"Reumatología",
             "path_img": "../img/doctor1x300.jpg",
             "description": "Voluptatibus facere iure eaque iste, excepturi, consectetur dolor beatae! Et consequuntur, quisquam accusamus sed sequi recusandae soluta.",
-            "monday":[],
-            "tuesday":[],
-            "wednesday":[],
-            "thursday":[],
-            "friday":[]
+            "turns":{
+                "monday":[],
+                "tuesday":[],
+                "wednesday":[],
+                "thursday":[],
+                "friday":[]
+            },
+            "working_hours":{
+                "monday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs"],
+                "tuesday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs"],
+                "wednesday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs"],
+                "thursday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "friday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"]
+            }
         },
         {
             "name": "Damián Soria",
             "specialization":"Dermatología",
             "path_img": "../img/doctor2x300.jpg",
             "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem asperiores tempore fugiat ex ipsa at nisi earum, aspernatur obcaecati harum voluptatibus facere iure eaque iste, excepturi, consectetur dolor soluta ipsa corrupti odio architecto repellendus. Vel alias possimus.",
-            "monday":[],
-            "tuesday":[],
-            "wednesday":[],
-            "thursday":[],
-            "friday":[]
+            "turns":{
+                "monday":[],
+                "tuesday":[],
+                "wednesday":[],
+                "thursday":[],
+                "friday":[]
+            },
+            "working_hours":{
+                "monday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "tuesday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "wednesday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "thursday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "friday": ["16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"]
+            }
         },
         {
             "name": "Natalí Martínez",
             "specialization":"Traumatología",
             "path_img": "../img/doctor3x300.jpg",
             "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem asperiores tempore fugiat ex ipsa at nisi earum, aspernatur obcaecati harum voluptatibus facere iure eaque iste, excepturi, consectetur dolor beatae! Et consequuntur, quisquam accusamus sed sequi recusandae soluta ipsa corrupti odio architecto repellendus. Vel alias possimus.",
-            "monday":[],
-            "tuesday":[],
-            "wednesday":[],
-            "thursday":[],
-            "friday":[]
+            "turns":{
+                "monday":[],
+                "tuesday":[],
+                "wednesday":[],
+                "thursday":[],
+                "friday":[]
+            },
+            "working_hours":{
+                "monday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "tuesday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "wednesday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "thursday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"],
+                "friday": ["08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"]
+            }
         }
     ],
-    "horarios":[]
+    "turns_config":[
+        {
+            "days": [
+                "Lunes",
+                "Martes",
+                "Miércoles",
+                "Jueves",
+                "Viernes"
+            ],
+            "hours": [
+                "08:30hs","09:00hs","09:30hs","10:00hs","10:30hs","11:00hs","11:30hs","12:00hs","16:00hs","16:30hs","17:00hs","17:30hs","18:00hs","18:30hs"
+            ]
+        }
+    ],
+    "users": [
+        {
+            "name":"admin",
+            "pass":"123456"
+        },
+        {
+            "name":"Solange",
+            "pass":"123456"
+        },
+        {
+            "name":"Carolina",
+            "pass":"123456"
+        },
+        {
+            "name":"Cesar",
+            "pass":"123456"
+        }
+    ]
 }
