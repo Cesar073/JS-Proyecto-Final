@@ -304,7 +304,8 @@ li {
     font-weight: 600;
 }
 
-#input_professional, #input_day, #input_specialization {
+#select_esp, #select_prof {
+    width: 320px;
     height: 40px;
     font-size: 1.3rem;
 }

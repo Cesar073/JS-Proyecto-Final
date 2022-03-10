@@ -73,7 +73,7 @@ $.getJSON(URLJSON, function (response, status) {
         // arrayProf JSON
         let _prof = response.professionals;
         for (const data of _prof){
-            arrayProf.push (new professional(data.name.toUpperCase(), data.specialization));
+            arrayProf.push (new professional(data.name, data.specialization));
         }
     }else{
         console.log("Error al abrir json");

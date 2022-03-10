@@ -1,3 +1,28 @@
+// RELATIVO A LA PAGINA DE TURNOS
+
+// Rellenamos el valor del los elementos select en la pagina: Turnos
+let textProf;
+let textEsp;
+console.log(arrayProf.length);
+console.log(arrayProf.prof2);
+console.log(arrayProf);
+
+console.log(arrayUsers.length);
+console.log(arrayUsers[0]);
+console.log(arrayUsers);
+
+for (let count in (arrayProf)){
+  console.log(`count: ${count}`);
+  textProf += `<option value="${count}">${arrayProf[count].professional}</option>`;
+  textEsp += `<option value="${count}">${arrayProf[count].specialization}</option>`;
+  $('#select_prof').append(`<select name="" id="select_esp">
+                          ${textProf}
+                          </select>`);
+  console.log(textProf);
+  $('#select_esp').append(textEsp);
+  count += 1;
+}
+console.log("Fin bucle");
 class turns {
   constructor(professional, date, hour, patient) {
     this.professional = professional;
@@ -226,5 +251,3 @@ function reserve_turn(prof, day, hours) {
   // ELIMINAR
   console.log(`Este es el array_days: ${array_days}`);
 }
-
-

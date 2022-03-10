@@ -44,7 +44,7 @@ let check_data_inputs = () => {
 let query_identity = () => {
     if (check_data_inputs() == true){
         let find = false;
-        for (count in (arrayUsers)){
+        for (let count in (arrayUsers)){
             let text = $('#input_user').val();
             if (text == arrayUsers[count].user){
                 find = true;
@@ -90,7 +90,7 @@ let create_user = () => {
 
 // Indicamos cuál sesión se ha iniciado
 $('#btn_login').text(JSON.parse(localStorage.getItem("session")));
-
 $('#btn_access').click(query_identity);
+$('#input_pass').change(query_identity);
 $('#btn_create_user').click(create_user);
 $('#btn_modal_X').click(close_login);
