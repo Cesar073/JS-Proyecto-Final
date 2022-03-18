@@ -5,7 +5,7 @@
 const URLJSON = "../db/data_base.json";
 let arrayUsers = [];
 let arrayUsersOfStorage = [];
-const arrayProf = [];
+let arrayProf = [];
 
 class professional {
     constructor(professional, specialization) {

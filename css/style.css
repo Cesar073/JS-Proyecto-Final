@@ -189,6 +189,12 @@ li {
     color: white;
 }
 
+#banner1 {
+    /* display: none;
+    visibility: hidden; */
+    /* position:absolute; */
+}
+
 #banner2 {
     display: none;
     visibility: hidden;
