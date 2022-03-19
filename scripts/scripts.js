@@ -1,41 +1,40 @@
 // RELATIVO A LA PAGINA DE TURNOS
 
 // Rellenamos el valor del los elementos select en la pagina: Turnos
-let textProf;
-let textEsp;
+// let textProf;
+// let textEsp;
 
-$(document).ready(function(){
-  console.log(arrayProf.length);
-  console.log(arrayProf[0]);
-  console.log(arrayProf);
-
-
+// $(document).ready(function(){
+//   console.log(arrayProf.length);
+//   console.log(arrayProf[0]);
+//   console.log(arrayProf);
 
 
-  for (let count in (arrayProf)){
-    console.log(`count: ${count}`);
-    textProf += `<option value="${count}">${arrayProf[count].professional}</option>`;
-    textEsp += `<option value="${count}">${arrayProf[count].specialization}</option>`;
-    $('#select_prof').append(`<select name="" id="select_esp">
-                            ${textProf}
-                            </select>`);
-    $('#select_esp').append(textEsp);
-    count += 1;
-  }
-})
+
+
+//   for (let count in (arrayProf)){
+//     console.log(`count: ${count}`);
+//     textProf = `<option value="${count}">${arrayProf[count].professional}</option>`;
+//     textEsp = `<option value="${count}">${arrayProf[count].specialization}</option>`;
+//     $('#select_prof').append(`${textProf}`);
+//     $('#select_esp').append(textEsp);
+//     count += 1;
+//   }
+//   console.log(`${textProf}`);
+// })
 
 console.log("Fin bucle");
 class turns {
-  constructor(professional, date, hour, patient) {
-    this.professional = professional;
-    this.date = date;
-    this.hour = hour;
-    this.patient = patient;
-  }
+    constructor(professional, date, hour, patient) {
+        this.professional = professional;
+        this.date = date;
+        this.hour = hour;
+        this.patient = patient;
+    }
 
-  get_turn() {
-    return `Consulta: turno para ${this.client} con el/la professional ${this.professional}, el día ${this.date} a las ${this.hour}.`;
-  }
+    get_turn() {
+        return `Consulta: turno para ${this.client} con el/la professional ${this.professional}, el día ${this.date} a las ${this.hour}.`;
+    }
 }
 
 button_hours_monday = [];
