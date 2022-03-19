@@ -162,7 +162,11 @@ li {
 #banner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    /* text-align: center;
+    align-self: center;
+    align-items: center;
+    align-content: center; */
+    position: relative;
 }
 
 .banner {
@@ -179,12 +183,13 @@ li {
 #nav_left, #nav_right {
     width: 60px;
     align-self: center;
-    
     border-radius: 45%;
 }
 #nav_left > p, #nav_right > p {
     font-size: 3rem;
-}#nav_left:hover, #nav_right:hover {
+    border: 2px solid black;
+}
+#nav_left:hover, #nav_right:hover {
     background-color:hsl(189, 88%, 62%);
     color: white;
 }
@@ -192,15 +197,18 @@ li {
 #banner1 {
     /* display: none;
     visibility: hidden; */
-    /* position:absolute; */
+    position:absolute;
+    z-index: -1;
+
 }
 
 #banner2 {
-    display: none;
+    /* display: none; */
     visibility: hidden;
+    position: absolute;
 }
 #banner3 {
-    display: none;
+    /* display: none; */
     visibility: hidden;
 }
 
