@@ -67,12 +67,11 @@ let query_identity = () => {
 let create_user = () => {
     if (check_data_inputs() == true){
         let find = false;
-        let text;
+        let text = $('#input_user').val();
         for (count in (arrayUsers)){
             if ($('#input_user').val() == arrayUsers[count].user){
                 messages("El nombre de Usuario no está disponible");
                 find = true;
-                text = $('#input_user').val();
                 break;
             }
         }
@@ -89,6 +88,7 @@ let create_user = () => {
 }
 
 // Indicamos cuál sesión se ha iniciado
+console.log("json");
 $('#btn_login').text(JSON.parse(localStorage.getItem("session")));
 $('#btn_access').click(query_identity);
 $('#input_pass').change(query_identity);
