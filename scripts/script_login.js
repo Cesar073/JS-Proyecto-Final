@@ -58,7 +58,7 @@ let query_identity = () => {
             }
         }
         if (find == false){
-            messages("El Usuario no existe");
+            messages("Error en el Usuario o Contraseña");
         }
     }
 }

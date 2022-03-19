@@ -228,13 +228,6 @@ li {
     border-left: 1px solid white;
 }
 
-.p__dia_false {
-    background-color: hsl(231, 4%, 69%);
-    color: white;
-    border-left: 1px solid white;
-    height: 50px;
-}
-
 .row__hor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -251,19 +244,16 @@ li {
     background-color: #d47324;
     border: 1px solid white;
 }
-.no_work {
-    background-color: gray;
-    border: 1px solid white;
-}
 .schedule_available:hover {
     border: 1px solid blue;
 }
 
 .references {
     border: 2px solid gray;
-    border-bottom: 0px;
     padding: 3px;
     margin-top: 20px;
+    margin-bottom: 50px;
+    visibility: hidden;
 }
 
 .reference {
@@ -303,7 +293,7 @@ li {
 }
 
 #select_esp, #select_prof {
-    width: 320px;
+    width: 390px;
     height: 40px;
     font-size: 1.3rem;
 }
